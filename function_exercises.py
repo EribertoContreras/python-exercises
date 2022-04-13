@@ -1,7 +1,7 @@
 # calling the max function with 1 argument, a list of numbers
-from re import A
-import string
-from tkinter import _TakeFocusValue
+# from re import A
+# import string
+# from tkinter import _TakeFocusValue
 
 
 max([4, 2, 3, 1])
@@ -73,8 +73,8 @@ sayhello('codeup')
 
 sayhello('codeup','what up')
 
-sayhello('Codeup', greeting='Salutations') # Okay other examples
-sayhello(greeting='Salutations', 'Codeup') # ERROR! it has to be in the right format like originally stated
+#sayhello('Codeup', greeting='Salutations') # Okay other examples
+#sayhello(greeting = 'Salutations', 'Codeup') # ERROR! it has to be in the right format like originally stated
 
 #calling functions
 
@@ -118,8 +118,9 @@ def somefunction():
     a_local_variable = 'pizza'
     print('Inside the function: %s' % a_local_variable)
 
-somefunction()
-print('Outside the function: %s' % a_local_variable)
+    somefunction()
+    print('outside the function: %s' % a_local_variable)
+
 #%s means 
 
 n = 123
@@ -248,13 +249,12 @@ def capitalize_starting_consonant(string):
 
 
 
-def calculate_tip(bill, tip_percentage=0.2):
+def calculate_tip(x,y):
 
-    tip = float(input("enter tip percentage: "))
-    bill = float(input("enter bill amount before tip: "))
-    return bill * (tip/100)
+    return int(x) * float(y)/100
 
-calculate_tip()
+calculate_tip(100,16)
+
 
 
 
@@ -290,7 +290,7 @@ def get_letter_grade(grade):
         elif grade >= 60:
             return "D"
         else:
-            retrun "F"
+            return "F"
     else:
         return "Input must be a number"
 
@@ -302,8 +302,8 @@ def remove_vowela(string1):
         return False
     output = ''
     for letter in string1:
-        id is_consonant(letter):
-        output += letter
+        if is_consonant(letter):
+            output += letter
     return output
 
 #10) Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
@@ -323,7 +323,7 @@ def normalize_name(string):
     for character in string:
         if character.isidentifier() or character == ' ':
             output += character
-    output = outputs.strip()
+    output = output.strip()
     output = output.replace(' ', '_')
     return output
 
@@ -337,7 +337,7 @@ def normalize_name(string):
 def cumulative_sum(string1):
     output = []
     for i, num in enumerate(string1):
-        sum_so_far = sum(string1[;i + 1])
+        sum_so_far = sum(string1[:i + 1])
         output.append(sum_so_far)
     return output
     
